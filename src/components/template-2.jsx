@@ -5,14 +5,12 @@ import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 const styles = StyleSheet.create({
     document: {
         width: '100%',
-        backgroundColor: '#FFFFFF',
-        zIndex: 10,
-        border: '1px solid black'
     },
     page: {
         display: 'flex',
         justifyContent: 'center',
-        height: '100%'
+        height: '100%',
+        fontFamily: 'sans-serif'
     },
     template: {
         margin: 5,
@@ -29,7 +27,7 @@ const styles = StyleSheet.create({
 // Create Document Component
 const TestTemplate2 = () => (
     <Document style={styles.document}>
-        <Page size="A3" style={styles.page}>
+        <Page size="A4" style={styles.page}>
             <View style={styles.template}>
                 {/* PEROSNAL INFO DIV */}
                 <View style={styles.personalInfo}>

@@ -5,14 +5,13 @@ import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 const styles = StyleSheet.create({
   document: {
     width: "100%",
-    backgroundColor: "#FFFFFF",
-    zIndex: 10,
-    border: "1px solid black",
   },
+
   page: {
     display: "flex",
     justifyContent: "center",
     height: "100%",
+    fontFamily: 'sans-serif'
   },
   template: {
     margin: 5,
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
 // Create Document Component
 const TestTemplate3 = () => (
   <Document style={styles.document}>
-    <Page size="A3" style={styles.page}>
+    <Page size="A4" style={styles.page}>
       <View style={styles.template}>
         {/* PERSONAL INFO DIV */}
         <View
@@ -57,7 +56,7 @@ const TestTemplate3 = () => (
           <View
             style={{
               width: "250px",
-              color: "#848484",
+              color: "#595959",
               display: "flex",
               flexDirection: "column",
               gap: "8px",
@@ -129,7 +128,7 @@ const TestTemplate3 = () => (
               Summary
             </View>
             <View
-              style={{ alignItems: "center", width: "80%", color: "#848484" }}
+              style={{ alignItems: "center", width: "80%", color: "#595959" }}
             >
               As a frontend developer, I bring a solid foundation in HTML, CSS,
               and JavaScript, coupled with expertise in frameworks such as React
@@ -213,6 +212,7 @@ const TestTemplate3 = () => (
                     display: "flex",
                     flexDirection: "column",
                     gap: "5px",
+                    color: "#595959",
                   }}
                 >
                   <View
@@ -322,6 +322,82 @@ const TestTemplate3 = () => (
                     >
                       <Text>-</Text>
                       <Text>Description</Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              {/* PROJECTS DIV */}
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "10px",
+                }}
+              >
+                <View
+                  style={{
+                    fontSize: "20px",
+                    borderBottom: "2px solid #666666",
+                    paddingBottom: "5px",
+                    width: "70%",
+                    marginTop: "30px",
+                  }}
+                >
+                  Projects
+                </View>
+                <View style={{display: 'flex', flexDirection: 'column', gap: '30px'}}>
+                  <View>
+                    <View style={{ display: "flex", gap: "10px" }}>
+                      <Text style={{ fontWeight: "550" }}>Banking System</Text>
+                      <Text>|</Text>
+                      <Text>2019</Text>
+                    </View>
+                    <View
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "7px",
+                      }}
+                    >
+                      <View>-</View>
+                      <View>Description</View>
+                    </View>
+                    <View
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "7px",
+                      }}
+                    >
+                      <View>-</View>
+                      <View>Description</View>
+                    </View>
+                  </View>
+                  <View>
+                    <View style={{ display: "flex", gap: "10px" }}>
+                      <Text style={{ fontWeight: "550" }}>Restaurant Management System</Text>
+                      <Text>|</Text>
+                      <Text>2018</Text>
+                    </View>
+                    <View
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "7px",
+                      }}
+                    >
+                      <View>-</View>
+                      <View>Description</View>
+                    </View>
+                    <View
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "7px",
+                      }}
+                    >
+                      <View>-</View>
+                      <View>Description</View>
                     </View>
                   </View>
                 </View>
